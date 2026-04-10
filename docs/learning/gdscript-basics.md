@@ -38,7 +38,7 @@ else:
 
 ## Signals (Events)
 
-Signals are how nodes talk to each other. Think of them like notifications.
+Signals are how nodes talk to each other. Think of them like notifications. In Lanternkeeper, signals are named in past tense — `transition_finished`, `line_ready`, `lantern_lit` — because they announce something that just happened, not something that's about to happen.
 
 ```gdscript
 # Define a signal
@@ -82,6 +82,20 @@ func _ready() -> void:
 ```
 
 `$AnimatedSprite2D` is shorthand for "get the child node named AnimatedSprite2D." The `@onready` means "don't try to find this until the scene is loaded."
+
+## The @onready Annotation
+
+`@onready` is a shortcut that waits until the node is fully loaded before grabbing a reference to a child node. You'll see it at the top of scene scripts:
+
+```gdscript
+@onready var _overlay: ColorRect = $ColorRect
+```
+
+This means: "once this node is ready, find the child called `ColorRect` and remember it as `_overlay`."
+
+Without `@onready`, the child node might not exist yet when the variable is set, and you'd get an error. With it, Godot guarantees the child is there before the assignment runs.
+
+You'll also see the underscore prefix (`_overlay`) — that's the convention for variables that are private to the script, meaning they're internal plumbing rather than something other scripts should touch directly.
 
 ## Arrays and Dictionaries
 

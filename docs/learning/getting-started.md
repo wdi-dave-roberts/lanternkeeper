@@ -54,6 +54,12 @@ A scene is just a saved tree of nodes. You can edit it visually or in code.
 - Press **F6** to run just the current scene
 - The game opens in a separate window
 
+## What's in the Project
+
+Lanternkeeper is built around four shared services (called autoloads) that handle the game's core systems — saving progress, playing audio, fading between scenes, and delivering dialogue. See [Autoloads Explained](autoloads-explained.md) for a plain-language breakdown of what each one does and why.
+
+The game also has a touch input system that detects how the player interacts with the phone screen — taps, swipes, and drags. These are the rituals: clearing fog with a swipe, brushing leaves with a drag, tapping the lantern to light it. On desktop (for development), mouse input is emulated as touch so you can test without a phone.
+
 ## Recommended Tutorials
 
 Start here and work through in order:
