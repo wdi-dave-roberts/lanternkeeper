@@ -1,0 +1,46 @@
+{
+  "greeting_first": {
+    "speaker": "Aetherling",
+    "lines": [
+      "Oh. Hello.",
+      "I didn't expect anyone else out here.",
+      "I've been working on something... but the fog rolled in.",
+      "Could you help me clear the way?"
+    ]
+  },
+  "greeting_return": {
+    "speaker": "Aetherling",
+    "lines": [
+      "You came back.",
+      "The clearing feels quieter when you're here."
+    ]
+  },
+  "after_clearing_stuck": {
+    "speaker": "Aetherling",
+    "lines": [
+      "Being stuck isn't the same as being lost.",
+      "Sometimes the fog is just... information."
+    ]
+  },
+  "after_clearing_frustrated": {
+    "speaker": "Aetherling",
+    "lines": [
+      "I get that way too.",
+      "The river helps me when things feel too tight."
+    ]
+  },
+  "after_clearing_inspired": {
+    "speaker": "Aetherling",
+    "lines": [
+      "I can tell.",
+      "That spark — hold onto it gently."
+    ]
+  },
+  "after_clearing_alright": {
+    "speaker": "Aetherling",
+    "lines": [
+      "Alright is good.",
+      "Not everything needs to be extraordinary."
+    ]
+  }
+}
