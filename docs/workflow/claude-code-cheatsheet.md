@@ -12,7 +12,7 @@ This gets Dave's latest work onto your machine. Do this first, every time. It ta
 
 **Check your starting point.** After pulling, it's good practice to ask:
 
-> "Is my branch clean? Any uncommitted changes?"
+> "Is my branch clean?"
 
 If CC says you have uncommitted changes from a previous session, decide: commit them, or discard them. Don't start new work on top of old uncommitted changes.
 
