@@ -48,6 +48,8 @@ nav:
     - Examples: workflow/examples.md
     - Asset Conventions: workflow/asset-conventions.md
     - Glossary: workflow/glossary.md
+  - Reference:
+    - Godot: reference/godot.md
   - Brainstorms:
     - "2026-04-10: Architecture & Design": brainstorms/2026-04-10-lanternkeeper-architecture-and-design-brainstorm.md
 

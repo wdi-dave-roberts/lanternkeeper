@@ -139,7 +139,7 @@ This setting tells Godot to convert mouse clicks and drags into touch events. Wi
 
 ## Step 4: Create the SceneTransition Scene
 
-SceneTransition needs a `.tscn` scene file (not just the `.gd` script) because it has a visual element — the fade-to-black overlay.
+SceneTransition needs a [`.tscn` scene file](../reference/godot.md#tscn--scene-files) (not just the [`.gd` script](../reference/godot.md#gd--gdscript-files)) because it has a visual element — the fade-to-black overlay. See [Scene Transitions](../reference/godot.md#scene-transitions) in the reference for why this works the way it does.
 
 1. **Scene > New Scene**
 2. Choose **Other Node** and select **CanvasLayer**
@@ -151,6 +151,8 @@ SceneTransition needs a `.tscn` scene file (not just the `.gd` script) because i
 8. **Save:** Ctrl+S (or Cmd+S on Mac) > save as `autoloads/scene_transition.tscn`
 
 ## Step 5: Register Autoloads
+
+[Autoloads](../reference/godot.md#autoloads) are scripts that Godot loads once at startup and keeps alive forever. They're how Lanternkeeper's shared services (saving progress, playing audio, fading between scenes, delivering dialogue) stay available to every scene.
 
 Open **Project > Project Settings > Autoload** tab.
 
@@ -178,7 +180,7 @@ For each autoload, click the folder icon to browse for the file, type the name, 
     - **Music**
     - **SFX**
     - **Ambient**
-5. The layout saves automatically as `default_bus_layout.tres`
+5. The layout saves automatically as `default_bus_layout.tres` (a [`.tres` resource file](../reference/godot.md#tres--resource-files))
 
 These buses let AudioManager control volume independently — you can mute sound effects without silencing the music.
 
@@ -188,7 +190,7 @@ This is the first thing the game shows when it runs.
 
 1. **Scene > New Scene**
 2. Choose **Other Node** and select **MarginContainer**
-3. Attach `shared/ui/safe_area_container.gd` as the script on the root MarginContainer (this handles iPhone notch/Dynamic Island margins)
+3. Attach `shared/ui/safe_area_container.gd` as the script on the root MarginContainer (this handles iPhone notch/Dynamic Island margins — see [Safe Areas](../reference/godot.md#safe-areas) in the reference)
 4. Set the MarginContainer layout to **Full Rect**
 5. Add a child: **ColorRect**
     - Set layout to **Full Rect**
