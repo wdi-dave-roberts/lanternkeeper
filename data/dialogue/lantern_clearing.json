@@ -1,46 +1,10 @@
-{
-  "greeting_first": {
-    "speaker": "Aetherling",
-    "lines": [
-      "Oh. Hello.",
-      "I didn't expect anyone else out here.",
-      "I've been working on something... but the fog rolled in.",
-      "Could you help me clear the way?"
-    ]
-  },
-  "greeting_return": {
-    "speaker": "Aetherling",
-    "lines": [
-      "You came back.",
-      "The clearing feels quieter when you're here."
-    ]
-  },
-  "after_clearing_stuck": {
-    "speaker": "Aetherling",
-    "lines": [
-      "Being stuck isn't the same as being lost.",
-      "Sometimes the fog is just... information."
-    ]
-  },
-  "after_clearing_frustrated": {
-    "speaker": "Aetherling",
-    "lines": [
-      "I get that way too.",
-      "The river helps me when things feel too tight."
-    ]
-  },
-  "after_clearing_inspired": {
-    "speaker": "Aetherling",
-    "lines": [
-      "I can tell.",
-      "That spark — hold onto it gently."
-    ]
-  },
-  "after_clearing_alright": {
-    "speaker": "Aetherling",
-    "lines": [
-      "Alright is good.",
-      "Not everything needs to be extraordinary."
-    ]
-  }
-}
+[
+  {"emotion": "calm", "text": "The clearing is quiet tonight. The lantern hums softly.", "weight": 1},
+  {"emotion": "calm", "text": "Leaves rustle gently overhead. Everything feels still.", "weight": 1},
+  {"emotion": "anxious", "text": "Take a breath. The lantern is here. You are here.", "weight": 1},
+  {"emotion": "anxious", "text": "Even the fog settles eventually. Give it time.", "weight": 1},
+  {"emotion": "tired", "text": "Rest is not laziness. The lantern will keep watch.", "weight": 1},
+  {"emotion": "tired", "text": "Close your eyes for a moment. The clearing will wait.", "weight": 1},
+  {"emotion": "energized", "text": "The lantern burns bright today! What shall we explore?", "weight": 1},
+  {"emotion": "energized", "text": "Your spark is contagious. Even the fireflies are dancing.", "weight": 1}
+]
