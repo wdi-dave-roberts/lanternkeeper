@@ -73,6 +73,9 @@ Godot will generate a `project.godot` file in the repo root. This is the project
 
 Open **Project > Project Settings** and set each value:
 
+!!! tip "Finding settings"
+    Project Settings has a search bar at the top. Type part of the setting name (e.g., "touch") to jump straight to it instead of navigating the tree.
+
 ### Display — Window Size
 
 | Setting Path | Value |
@@ -133,9 +136,6 @@ Lanternkeeper's interactions are all touch-based: taps, swipes, and drags. On a 
 This setting tells Godot to convert mouse clicks and drags into touch events. Without it, your touch input code (`InputEventScreenTouch`, `InputEventScreenDrag`) won't fire when you click with the mouse, and you'd have no way to test interactions without a phone.
 
 **Leave this on during development. It has no effect on real phones.**
-
-!!! tip "Finding settings"
-    Project Settings has a search bar at the top. Type part of the setting name (e.g., "touch") to jump straight to it instead of navigating the tree.
 
 ## Step 4: Create the SceneTransition Scene
 
