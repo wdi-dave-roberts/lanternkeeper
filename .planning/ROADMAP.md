@@ -29,7 +29,13 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. A blank scene builds, signs, installs, and runs on a physical iOS device — no silent crashes, full pipeline verified end-to-end
   4. Git LFS is configured via .gitattributes for PNG, OGG, WAV, TTF before any binary asset is committed
   5. Allie's learning environment is prepared: Brackeys and GDQuest bookmarks, GDScript cheat sheet in hand
-**Plans**: TBD
+**Plans**: 4 plans
+
+Plans:
+- [ ] 00-01-PLAN.md — GDScript autoloads, touch input, safe area container
+- [ ] 00-02-PLAN.md — Learning resources for Allie (docs site)
+- [ ] 00-03-PLAN.md — Godot project creation, settings, test scene (human-driven)
+- [ ] 00-04-PLAN.md — iOS pipeline verification (human-driven, Apple Developer enrollment)
 
 ### Phase 1: Design Parameters
 **Goal**: Every design and content contract is locked with Allie — session design, art direction, sound direction, emotional states, dialogue schema, sprite format, quest design — so Phase 2+ build phases can be defined from real decisions, not assumptions
@@ -51,5 +57,5 @@ Phases execute in numeric order: 0 → 1 → (2+ defined at end of Phase 1)
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 0. Technical Foundation | 0/TBD | Not started | - |
+| 0. Technical Foundation | 0/4 | Planned | - |
 | 1. Design Parameters | 0/TBD | Not started | - |
