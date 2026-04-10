@@ -145,6 +145,8 @@ See [Scene Transitions](../reference/godot.md#scene-transitions) in the referenc
 
 <!-- screenshot: Godot editor showing completed SceneTransition scene tree (CanvasLayer > ColorRect) -->
 
+<div class="annotate" markdown>
+
 1. **Scene > New Scene** (1)
 2. Choose **Other Node** and select **CanvasLayer** (2)
 3. In the Inspector, set the **Layer** property to `128` (3)
@@ -153,7 +155,8 @@ See [Scene Transitions](../reference/godot.md#scene-transitions) in the referenc
 6. In the Inspector, set the ColorRect's **Color** to black (`#000000`) (6)
 7. Select the root CanvasLayer node, then in the Inspector click the script icon (or drag `autoloads/scene_transition.gd` onto it) to attach the script (7)
 8. **Save:** Ctrl+S (or Cmd+S on Mac) > save as `autoloads/scene_transition.tscn`
-{ .annotate }
+
+</div>
 
 1.  Every time you create something new in Godot, you start with a new scene. A scene is just a tree of nodes saved to a file. Right now the scene is empty — we're about to build a tiny tree: one CanvasLayer with one ColorRect inside it.
 
