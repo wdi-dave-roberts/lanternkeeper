@@ -8,7 +8,7 @@
 
 Verified Godot project setup with correct settings, four autoload scaffolds, iOS build pipeline proven on a physical device, Git LFS configured, and learning resources for Allie published to the docs site. No game content, no art, no dialogue — pure technical bedrock.
 
-**Scope change:** A Phase 0.1 (Orientation) will be inserted before this phase's execution to walk through Godot fundamentals. This phase's requirements remain the same but assume the developer has completed orientation first.
+**Orientation folded in:** Godot fundamentals (scenes, nodes, scripts, signals, autoloads) are taught as part of Phase 0, not as a separate phase. Claude explains each concept in plain language before building it.
 
 </domain>
 
@@ -16,7 +16,7 @@ Verified Godot project setup with correct settings, four autoload scaffolds, iOS
 ## Implementation Decisions
 
 ### Autoload Scaffolding
-- **D-01:** Insert a Phase 0.1: Orientation before executing Phase 0. The orientation phase walks through Godot fundamentals — editor layout, what scenes/nodes/scripts are, how the pieces connect. No code written, just understanding.
+- **D-01:** Godot orientation is folded into Phase 0 (no separate phase). Claude explains each concept (scenes, nodes, scripts, signals, autoloads) in plain language as it becomes relevant during the build. Install Godot is naturally the first step.
 - **D-02:** Autoloads in Phase 0 should be functional stubs (not bare structure, not full implementation). Each service does its core job with placeholder content: GameState saves/loads, SceneTransition fades, AudioManager plays on correct bus, DialogueManager loads JSON. Enough to verify on iOS.
 
 ### iOS Pipeline
@@ -98,7 +98,7 @@ Verified Godot project setup with correct settings, four autoload scaffolds, iOS
 <deferred>
 ## Deferred Ideas
 
-- **Phase 0.1: Orientation** — New phase to insert before Phase 0 execution. Walk through Godot fundamentals (editor, scenes, nodes, scripts) before building anything. Needs to be added to roadmap via `/gsd-insert-phase`.
+- ~~Phase 0.1: Orientation~~ — Folded into Phase 0. No separate phase needed.
 - **Allie's PC development environment** — She's PC only. When she starts hands-on work (post Phase 1), her environment setup will need its own attention. Not relevant for Phase 0.
 
 </deferred>
