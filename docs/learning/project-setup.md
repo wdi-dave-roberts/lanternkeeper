@@ -139,7 +139,7 @@ This setting tells Godot to convert mouse clicks and drags into touch events. Wi
 
 ## Step 4: Create the SceneTransition Scene
 
-SceneTransition needs a [`.tscn` scene file](../reference/godot.md#tscn--scene-files) (not just the [`.gd` script](../reference/godot.md#gd--gdscript-files)) because it has a visual element — the fade-to-black overlay. See [Scene Transitions](../reference/godot.md#scene-transitions) in the reference for why this works the way it does.
+SceneTransition needs a [`.tscn` scene file](../reference/godot.md#tscn-scene-files) (not just the [`.gd` script](../reference/godot.md#gd-gdscript-files)) because it has a visual element — the fade-to-black overlay. See [Scene Transitions](../reference/godot.md#scene-transitions) in the reference for why this works the way it does.
 
 1. **Scene > New Scene**
 2. Choose **Other Node** and select **CanvasLayer**
@@ -180,7 +180,7 @@ For each autoload, click the folder icon to browse for the file, type the name, 
     - **Music**
     - **SFX**
     - **Ambient**
-5. The layout saves automatically as `default_bus_layout.tres` (a [`.tres` resource file](../reference/godot.md#tres--resource-files))
+5. The layout saves automatically as `default_bus_layout.tres` (a [`.tres` resource file](../reference/godot.md#tres-resource-files))
 
 These buses let AudioManager control volume independently — you can mute sound effects without silencing the music.
 
