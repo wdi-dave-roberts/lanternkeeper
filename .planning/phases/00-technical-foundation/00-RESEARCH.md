@@ -87,7 +87,7 @@ A critical Godot-specific pitfall: tweening AudioStreamPlayer volume from an aut
 | .gitattributes (LFS) | FOUND-08 | ✓ | Configured for PNG, OGG, WAV, TTF, OTF, JPG, MP3, PSD, TGA | — |
 
 **Missing dependencies with no fallback:**
-- Godot 4.6.2 — must be installed before any project work begins. Download the standard (non-.NET) build from https://godotengine.org/download
+- Godot 4.6.2 — must be installed before any project work begins. Download the standard (non-.NET) build from https://godotengine.org/download. On macOS: drag to Applications. No installer — single executable. [VERIFIED: godotengine.org]
 - Xcode.app — iOS export requires Xcode.app (not just Command Line Tools). Install from the Mac App Store. Currently, Xcode 16 is required for App Store builds; Xcode 16 is sufficient for device testing.
 - Apple Developer Program — $99/year enrollment required before signing or device install. Enrollment takes up to 48 hours to process.
 
@@ -515,22 +515,13 @@ docs/
 
 ---
 
-## Open Questions
+## Open Questions (RESOLVED)
 
-1. **Apple Developer Team ID**
-   - What we know: Required field for iOS export; 10-char code from developer.apple.com
-   - What's unclear: Dave has not yet enrolled, so Team ID is not known
-   - Recommendation: Planner should create a task "Get Team ID from developer.apple.com after enrollment" and use a placeholder in export settings until then
+1. **Apple Developer Team ID** — RESOLVED: Plan 04 Task 1 is a human-action checkpoint where Dave enrolls in the Apple Developer Program and provides the Team ID after enrollment. The value is unknown until enrollment completes, which is expected and handled by the checkpoint gate.
 
-2. **Bundle ID**
-   - What we know: Reverse-domain format required; must be registered in Apple Developer portal
-   - What's unclear: What domain to use (dave@whitedoeinn.com suggests whitedoeinn.com, but this is a personal project for Garrett)
-   - Recommendation: Dave decides — `com.whitedoeinn.lanternkeeper` or personal domain variant; planner can leave as a task with a note
+2. **Bundle ID** — RESOLVED: Plan 04 Task 1 human-action checkpoint asks Dave to decide the Bundle ID (reverse-domain format). The decision is deferred to execution time because it depends on Dave's domain preference for a personal project.
 
-3. **Touch Input as Autoload vs. Shared Script**
-   - What we know: FOUND-07 specifies a touch input utility with configurable thresholds
-   - What's unclear: Whether it should be a 5th registered autoload or a shared script instantiated per-scene
-   - Recommendation: Register as autoload (5th in order, after DialogueManager) — game-wide gesture detection simplifies per-scene input handling
+3. **Touch Input as Autoload vs. Shared Script** — RESOLVED: Plans use `shared/touch_input.gd` as a shared script (not a registered autoload). Plan 01 creates it at that path. Scenes that need gesture detection attach or instantiate it directly.
 
 ---
 

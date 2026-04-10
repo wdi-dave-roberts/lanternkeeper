@@ -10,7 +10,7 @@ Calm, ritual-based mobile companion game built with Godot 4.6+ (GDScript). A bon
 - **Language:** GDScript — C# is experimental on mobile, avoid it
 - **Renderer:** Compatibility (OpenGL) — Forward+ crashes on AMD, zero 2D benefit
 - **Particles:** CPUParticles2D — lower fixed cost than GPU at low counts on mobile
-- **Display:** 1080×1920 portrait, canvas_items stretch, keep_height aspect
+- **Display:** 1080x1920 portrait, canvas_items stretch, keep_width aspect
 - **State:** FileAccess.store_var() for game state, ConfigFile for user settings
 - **Dialogue:** JSON files in data/dialogue/ — Allie edits these directly
 - **Animation:** AnimatedSprite2D for character idles
