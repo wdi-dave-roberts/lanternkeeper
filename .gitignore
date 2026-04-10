@@ -9,6 +9,9 @@ export_presets.cfg
 data_*/
 mono_crash.*.json
 
+# MkDocs build output
+site/
+
 # OS
 .DS_Store
 Thumbs.db

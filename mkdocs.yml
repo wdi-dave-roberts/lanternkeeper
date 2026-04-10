@@ -1,0 +1,55 @@
+site_name: Lanternkeeper — Emberfall
+site_url: https://wdi-dave-roberts.github.io/lanternkeeper/
+repo_url: https://github.com/wdi-dave-roberts/lanternkeeper
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: custom
+      accent: custom
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.path
+    - navigation.top
+    - navigation.instant
+    - navigation.instant.progress
+    - search.suggest
+    - search.highlight
+    - toc.follow
+    - content.action.edit
+    - content.action.view
+
+nav:
+  - Home: index.md
+  - Design:
+    - Original Vision: design/original-vision.md
+    - Game Parameters: design/game-parameters.md
+  - Architecture:
+    - Technical Decisions: architecture/technical-decisions.md
+    - Project Structure: architecture/project-structure.md
+  - Content:
+    - Dialogue Guide: content/dialogue-guide.md
+    - Quest Guide: content/quest-guide.md
+  - Learning:
+    - Getting Started with Godot: learning/getting-started.md
+    - GDScript Basics: learning/gdscript-basics.md
+  - Brainstorms:
+    - "2026-04-10: Architecture & Design": brainstorms/2026-04-10-lanternkeeper-architecture-and-design-brainstorm.md
+
+extra_css:
+  - stylesheets/extra.css
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+      clickable_checkbox: true
+  - toc:
+      permalink: true

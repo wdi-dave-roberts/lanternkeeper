@@ -1,0 +1,159 @@
+/* === Lanternkeeper Brand Colors === */
+/* Warm, calm palette inspired by lantern light in a foggy forest */
+
+:root > * {
+  --md-primary-fg-color: #2d3a2e;
+  --md-primary-fg-color--light: #4a5d4c;
+  --md-primary-fg-color--dark: #1e271f;
+
+  --md-accent-fg-color: #d4a44a;
+  --md-accent-fg-color--light: #e0bc6e;
+
+  --md-default-bg-color: #faf8f3;
+  --md-default-bg-color--light: #fcfaf6;
+
+  --md-footer-bg-color: #2d3a2e;
+  --md-footer-bg-color--dark: #1e271f;
+
+  --md-typeset-a-color: #8b5e3c;
+}
+
+.md-header {
+  background-color: #2d3a2e;
+}
+
+.md-tabs {
+  background-color: #2d3a2e;
+}
+
+/* === Homepage Hero === */
+
+.md-typeset .hero {
+  padding: 2.5rem;
+  margin-bottom: 2rem;
+  border: 1px solid rgba(45, 58, 46, 0.12);
+  border-radius: 16px;
+  background:
+    linear-gradient(135deg, rgba(45, 58, 46, 0.94), rgba(30, 39, 31, 0.92)),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), transparent);
+  color: #fff7e8;
+}
+
+.md-typeset .hero h1,
+.md-typeset .hero p,
+.md-typeset .hero a {
+  color: inherit;
+}
+
+.md-typeset .hero h1 {
+  margin-top: 0;
+}
+
+.md-typeset .hero p {
+  max-width: 46rem;
+  font-size: 1.08rem;
+}
+
+.md-typeset .eyebrow {
+  margin-bottom: 0.65rem;
+  color: rgba(255, 247, 232, 0.78);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+/* === Hero Actions === */
+
+.md-typeset .hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  margin-top: 1.5rem;
+}
+
+.md-typeset .button-link {
+  display: inline-block;
+  padding: 0.7rem 1.15rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 247, 232, 0.28);
+  background: rgba(255, 255, 255, 0.08);
+  text-decoration: none;
+  font-weight: 600;
+  color: #fff7e8;
+}
+
+.md-typeset .button-link.primary {
+  background: #d4a44a;
+  border-color: #d4a44a;
+  color: #2f2613;
+}
+
+/* === Card Grids === */
+
+.md-typeset .signal-grid,
+.md-typeset .doc-grid {
+  display: grid;
+  gap: 1rem;
+  margin: 1.5rem 0 2rem;
+}
+
+.md-typeset .signal-grid {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.md-typeset .doc-grid {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.md-typeset .signal-card,
+.md-typeset .doc-card,
+.md-typeset .callout {
+  padding: 1.15rem 1.2rem;
+  border: 1px solid rgba(45, 58, 46, 0.12);
+  border-radius: 12px;
+  background: #fff;
+}
+
+.md-typeset .signal-card strong,
+.md-typeset .doc-card strong {
+  display: block;
+  margin-bottom: 0.35rem;
+  color: #2d3a2e;
+}
+
+.md-typeset .doc-card p,
+.md-typeset .signal-card p,
+.md-typeset .callout p {
+  margin-bottom: 0;
+  font-size: 0.9rem;
+}
+
+/* === Section Labels === */
+
+.md-typeset .section-label {
+  margin: 2rem 0 0.75rem;
+  color: #8b5e3c;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+/* === Callout Box === */
+
+.md-typeset .callout {
+  background: linear-gradient(180deg, rgba(212, 164, 74, 0.14), rgba(255, 255, 255, 0.86));
+}
+
+/* === Responsive === */
+
+@media (max-width: 700px) {
+  .md-typeset .hero {
+    padding: 1.5rem;
+  }
+
+  .md-typeset .hero-actions {
+    flex-direction: column;
+  }
+}
