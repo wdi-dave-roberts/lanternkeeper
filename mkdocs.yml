@@ -35,6 +35,7 @@ nav:
     - Quest Guide: content/quest-guide.md
   - Learning:
     - Getting Started with Godot: learning/getting-started.md
+    - "How We Build: GSD": learning/gsd-guide.md
     - GDScript Basics: learning/gdscript-basics.md
   - Brainstorms:
     - "2026-04-10: Architecture & Design": brainstorms/2026-04-10-lanternkeeper-architecture-and-design-brainstorm.md

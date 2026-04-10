@@ -49,6 +49,25 @@ Global singletons that cover every cross-cutting concern:
 - Private members prefixed with `_`
 - Scene scripts live next to their `.tscn` file, same name
 
+## Workflow: GSD (Git Shit Done)
+
+| Decision | Choice | Rationale |
+|----------|--------|-----------|
+| Project workflow | GSD | Structured phased development with AI-assisted planning, execution, and verification. Breaks the project into visible milestones Allie can track. |
+| Phase structure | Phase 0 (tech foundation) → Phase 1 (game design) → Phase 2+ (build) | Tech decisions first (Dave solo), then creative decisions (Dave + Allie), then building with both decided. |
+| Planning artifacts | `.planning/` directory | GSD stores roadmaps, phase plans, research, and verification reports here. It's the project management layer. |
+
+GSD is a structured workflow built into our Claude Code development environment. It manages the full lifecycle of a project phase: researching how to approach it, planning the work, executing it with atomic commits, and verifying the result matches what was intended.
+
+**Why GSD for this project:**
+
+- **Visible progress.** Each phase has a clear goal and exit criteria. Allie can see where we are and what's next without reading code.
+- **Decisions before code.** GSD forces us to research and plan before building. For a game project where neither of us has done this before, that discipline matters.
+- **AI-assisted but human-driven.** GSD uses AI agents for research, planning, and code review — but creative and design decisions stay with us.
+- **Atomic commits.** Each piece of work is committed independently. If something breaks, we can roll back one thing without losing everything.
+
+See the [GSD Guide](../learning/gsd-guide.md) for how to work with it day-to-day.
+
 ## Community-Sourced Warnings
 
 From Reddit research (r/godot, r/gamedev, April 2026):

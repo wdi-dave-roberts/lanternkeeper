@@ -1,4 +1,12 @@
-# Getting Started with Godot
+# Getting Started
+
+Two things to understand before diving in: how the project is organized (GSD), and how the game engine works (Godot).
+
+## How We Build
+
+This project uses a phased workflow called GSD to keep our work organized. Before touching any code or content, read [How We Build: GSD](gsd-guide.md) to understand the rhythm of discuss → plan → execute → verify.
+
+## Godot — The Game Engine
 
 A guide for getting set up and understanding what you're looking at.
 
