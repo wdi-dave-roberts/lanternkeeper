@@ -47,6 +47,7 @@ nav:
     - GSD Advanced: workflow/gsd-advanced.md
     - Examples: workflow/examples.md
     - Asset Conventions: workflow/asset-conventions.md
+    - Glossary: workflow/glossary.md
   - Brainstorms:
     - "2026-04-10: Architecture & Design": brainstorms/2026-04-10-lanternkeeper-architecture-and-design-brainstorm.md
 
@@ -54,6 +55,7 @@ extra_css:
   - stylesheets/extra.css
 
 markdown_extensions:
+  - def_list
   - attr_list
   - md_in_html
   - admonition
