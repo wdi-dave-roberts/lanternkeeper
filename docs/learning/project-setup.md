@@ -14,6 +14,16 @@ Download the **standard** build from [godotengine.org/download](https://godoteng
 
 === "Mac"
 
+    **Option A: Homebrew (recommended)**
+
+    ```bash
+    brew install --cask godot
+    ```
+
+    This installs Godot.app to `/Applications` and adds a `godot` command to your terminal. Updates with `brew upgrade godot`.
+
+    **Option B: Manual download**
+
     1. Download the macOS universal build
     2. Unzip and drag **Godot.app** to `/Applications`
     3. First launch: right-click > Open (macOS will ask to verify since it's not from the App Store)
