@@ -76,66 +76,51 @@ Open **Project > Project Settings** and set each value:
 !!! tip "Finding settings"
     Project Settings has a search bar at the top. Type part of the setting name (e.g., "touch") to jump straight to it instead of navigating the tree.
 
-### Display — Window Size
+**Display > Window > Size > Viewport Width:** `1080`
+**Display > Window > Size > Viewport Height:** `1920`
 
-| Setting Path | Value |
-|---|---|
-| Display > Window > Size > Viewport Width | `1080` |
-| Display > Window > Size > Viewport Height | `1920` |
+??? info "What's a base resolution?"
+    This is your **base resolution** — the reference size you design for. It doesn't mean the game only runs at this exact size. Godot uses these numbers as the starting point for scaling to whatever screen the game actually runs on.
 
-This is your **base resolution** — the reference size you design for. It doesn't mean the game only runs at this exact size. Godot uses these numbers as the starting point for scaling to whatever screen the game actually runs on.
+    We chose 1080x1920 because it's the most common phone resolution in portrait orientation. When the game runs on a phone with a different resolution (say 1440x3200), Godot scales everything to fit using the stretch settings below.
 
-We chose 1080x1920 because it's the most common phone resolution in portrait orientation. When the game runs on a phone with a different resolution (say 1440x3200), Godot scales everything to fit using the stretch settings below.
+**Display > Window > Stretch > Mode:** `canvas_items`
 
-### Display — Stretch Mode
+??? info "What's stretch mode?"
+    Stretch mode controls what happens when the game window doesn't match your base resolution. Godot has three options:
 
-| Setting Path | Value |
-|---|---|
-| Display > Window > Stretch > Mode | `canvas_items` |
+    - **`disabled`** — No stretching. The game renders at exactly 1080x1920 and that's it. On a phone with a different resolution, you get black bars or clipping. Useless for mobile.
+    - **`canvas_items`** — Scales the entire 2D canvas (sprites, UI, text) to fit the screen. Everything scales together proportionally. Text stays crisp because the scaling happens at the rendering level, not by stretching a bitmap. **This is the standard choice for 2D mobile games.**
+    - **`viewport`** — Renders the game to a fixed-size texture at your base resolution, then stretches that image to fill the screen. Think of it like taking a screenshot at 1080x1920 and then zooming in. Great for pixel art games where you want chunky pixels. Bad for us because text and smooth sprites would look blurry at non-integer scale factors.
 
-Stretch mode controls what happens when the game window doesn't match your base resolution. Godot has three options:
+    **Our choice:** `canvas_items`. Lanternkeeper has smooth art and readable text — canvas_items keeps both crisp at any screen size.
 
-- **`disabled`** — No stretching. The game renders at exactly 1080x1920 and that's it. On a phone with a different resolution, you get black bars or clipping. Useless for mobile.
-- **`canvas_items`** — Scales the entire 2D canvas (sprites, UI, text) to fit the screen. Everything scales together proportionally. Text stays crisp because the scaling happens at the rendering level, not by stretching a bitmap. **This is the standard choice for 2D mobile games.**
-- **`viewport`** — Renders the game to a fixed-size texture at your base resolution, then stretches that image to fill the screen. Think of it like taking a screenshot at 1080x1920 and then zooming in. Great for pixel art games where you want chunky pixels. Bad for us because text and smooth sprites would look blurry at non-integer scale factors.
+**Display > Window > Stretch > Aspect:** `keep_width`
 
-**Our choice:** `canvas_items`. Lanternkeeper has smooth art and readable text — canvas_items keeps both crisp at any screen size.
+??? info "What's stretch aspect?"
+    Phones aren't all the same shape. Some are 16:9, others are 19:9 or even 21:9 (taller and narrower). Stretch aspect controls how Godot handles the mismatch between your base aspect ratio and the phone's actual aspect ratio.
 
-### Display — Stretch Aspect
-
-| Setting Path | Value |
-|---|---|
-| Display > Window > Stretch > Aspect | `keep_width` |
-
-Phones aren't all the same shape. Some are 16:9, others are 19:9 or even 21:9 (taller and narrower). Stretch aspect controls how Godot handles the mismatch between your base aspect ratio and the phone's actual aspect ratio.
-
-- **`keep_width`** — Keeps your designed width (1080) and adds or removes vertical space. On a taller phone, the player sees more of the scene at the top and bottom. On a shorter phone, the view crops slightly at the top and bottom. **This is correct for portrait games.**
-- **`keep_height`** — Keeps your designed height (1920) and adds or removes horizontal space. On a wider screen, the player sees more on the sides. **This is correct for landscape games.**
-- **`ignore`** — Stretches to fill the screen, distorting the aspect ratio. Everything looks squished or stretched. Never use this.
-- **`expand`** — Similar to keep_width/keep_height but lets the viewport grow in both directions. More complex to design for.
+    - **`keep_width`** — Keeps your designed width (1080) and adds or removes vertical space. On a taller phone, the player sees more of the scene at the top and bottom. On a shorter phone, the view crops slightly at the top and bottom. **This is correct for portrait games.**
+    - **`keep_height`** — Keeps your designed height (1920) and adds or removes horizontal space. On a wider screen, the player sees more on the sides. **This is correct for landscape games.**
+    - **`ignore`** — Stretches to fill the screen, distorting the aspect ratio. Everything looks squished or stretched. Never use this.
+    - **`expand`** — Similar to keep_width/keep_height but lets the viewport grow in both directions. More complex to design for.
 
 !!! warning "keep_width, not keep_height"
     This is a portrait game. `keep_width` adds vertical space on taller phones (19:9, 21:9). `keep_height` is for landscape games — using it here would crop the sides on narrow screens. This is a common mistake because many tutorials are written for landscape games.
 
-### Display — Orientation
+**Display > Window > Handheld > Orientation:** `portrait`
 
-| Setting Path | Value |
-|---|---|
-| Display > Window > Handheld > Orientation | `portrait` |
+??? info "Why portrait?"
+    Locks the game to portrait (tall) orientation. The screen won't rotate if the player tilts their phone sideways. Lanternkeeper is a calm, one-handed companion app — portrait is the natural hold for checking in on your phone.
 
-Locks the game to portrait (tall) orientation. The screen won't rotate if the player tilts their phone sideways. Lanternkeeper is a calm, one-handed companion app — portrait is the natural hold for checking in on your phone.
+**Input Devices > Pointing > Emulate Touch From Mouse:** `true`
 
-### Input
+??? info "What does this do?"
+    Lanternkeeper's interactions are all touch-based: taps, swipes, and drags. On a real phone, these come from the touchscreen. On your development computer, you don't have a touchscreen — you have a mouse.
 
-| Setting Path | Value |
-|---|---|
-| Input Devices > Pointing > Emulate Touch From Mouse | `true` |
+    This setting tells Godot to convert mouse clicks and drags into touch events. Without it, your touch input code (`InputEventScreenTouch`, `InputEventScreenDrag`) won't fire when you click with the mouse, and you'd have no way to test interactions without a phone.
 
-Lanternkeeper's interactions are all touch-based: taps, swipes, and drags. On a real phone, these come from the touchscreen. On your development computer, you don't have a touchscreen — you have a mouse.
-
-This setting tells Godot to convert mouse clicks and drags into touch events. Without it, your touch input code (`InputEventScreenTouch`, `InputEventScreenDrag`) won't fire when you click with the mouse, and you'd have no way to test interactions without a phone.
-
-**Leave this on during development. It has no effect on real phones.**
+    **Leave this on during development. It has no effect on real phones.**
 
 ## Step 4: Create the SceneTransition Scene
 
