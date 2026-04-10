@@ -139,16 +139,45 @@ This setting tells Godot to convert mouse clicks and drags into touch events. Wi
 
 ## Step 4: Create the SceneTransition Scene
 
-SceneTransition needs a [`.tscn` scene file](../reference/godot.md#tscn-scene-files) (not just the [`.gd` script](../reference/godot.md#gd-gdscript-files)) because it has a visual element — the fade-to-black overlay. See [Scene Transitions](../reference/godot.md#scene-transitions) in the reference for why this works the way it does.
+When the game switches between scenes (say, from the Lantern Clearing to the Fog Forest), we don't want a jarring instant cut. SceneTransition handles a smooth fade-to-black effect. Because that fade is a visual element — a black rectangle that covers the screen — it needs to live in a [`.tscn` scene file](../reference/godot.md#tscn-scene-files), not just a [`.gd` script](../reference/godot.md#gd-gdscript-files).
 
-1. **Scene > New Scene**
-2. Choose **Other Node** and select **CanvasLayer**
-3. In the Inspector (right panel), set the **Layer** property to `128` (ensures the fade overlay draws on top of everything)
-4. **Add a child node:** right-click the CanvasLayer > Add Child Node > **ColorRect**
-5. Select the ColorRect, then in the toolbar above the viewport click **Layout > Full Rect** (this stretches it to fill the screen)
-6. In the Inspector, set the ColorRect's **Color** to black (`#000000`)
-7. Select the root CanvasLayer node, then in the Inspector click the script icon (or drag `autoloads/scene_transition.gd` onto it) to attach the script
+See [Scene Transitions](../reference/godot.md#scene-transitions) in the reference for the full explanation of how this works and why it's an autoload.
+
+<!-- screenshot: Godot editor showing completed SceneTransition scene tree (CanvasLayer > ColorRect) -->
+
+1. **Scene > New Scene** (1)
+2. Choose **Other Node** and select **CanvasLayer** (2)
+3. In the Inspector, set the **Layer** property to `128` (3)
+4. **Add a child node:** right-click the CanvasLayer in the Scene Tree > **Add Child Node** > select **ColorRect** (4)
+5. Select the ColorRect, then in the toolbar above the viewport click **Layout > Full Rect** (5)
+6. In the Inspector, set the ColorRect's **Color** to black (`#000000`) (6)
+7. Select the root CanvasLayer node, then in the Inspector click the script icon (or drag `autoloads/scene_transition.gd` onto it) to attach the script (7)
 8. **Save:** Ctrl+S (or Cmd+S on Mac) > save as `autoloads/scene_transition.tscn`
+{ .annotate }
+
+1.  Every time you create something new in Godot, you start with a new scene. A scene is just a tree of nodes saved to a file. Right now the scene is empty — we're about to build a tiny tree: one CanvasLayer with one ColorRect inside it.
+
+2.  A **CanvasLayer** is a special node that draws on its own rendering layer, separate from the main scene. Normal scene content (backgrounds, characters, UI) draws on the default layer. By putting our fade overlay on a CanvasLayer, it stays independent — it won't be affected by camera movement or scene changes.
+
+    You're choosing "Other Node" instead of the presets (2D Scene, 3D Scene, User Interface) because CanvasLayer doesn't fit any of those categories. It's a rendering utility, not a scene type.
+
+3.  **What are layers?** Godot draws things in order — lower layer numbers are drawn first (behind), higher numbers are drawn on top. Normal scene content defaults to layer 0. We set this to 128 to guarantee the fade overlay draws on top of absolutely everything else in the game.
+
+    Why 128 specifically? There's nothing magic about it — any high number works. 128 is a convention that leaves plenty of room for other layers below it (UI at layer 1-10, popups at layer 50, etc.) without risking a collision. Think of it like reserving the top floor of a building for the penthouse.
+
+4.  **ColorRect** is the simplest visual node in Godot — it's just a rectangle filled with a solid color. We're using it as the fade overlay: a full-screen black rectangle that can be made transparent (invisible) or opaque (screen goes black). The SceneTransition script animates this transparency to create the fade effect.
+
+    You're adding it as a *child* of the CanvasLayer. In Godot's scene tree, children inherit their parent's properties — so this ColorRect will draw on layer 128 because its parent CanvasLayer is on layer 128.
+
+5.  **Full Rect** is a layout preset that stretches the node to fill its entire parent area. Without this, the ColorRect would be a tiny rectangle in the corner. With Full Rect, it covers the entire screen — which is what we need for a fade overlay.
+
+    You'll use Full Rect frequently in Godot. Any time you want something to fill the available space (backgrounds, overlays, containers), this is the preset.
+
+6.  The fade starts invisible (the script sets opacity to 0 on startup) and animates to fully opaque black, then back to transparent. We set the color to black here so the fade effect is a fade-to-black, which is the most natural transition for a calm game. The script handles the animation — all we're doing here is choosing the color of the overlay.
+
+7.  **Attaching a script** tells Godot "this node should run this code." The `scene_transition.gd` script contains the `transition_to()` function that other scenes call when they want to change to a different scene. By attaching it to the CanvasLayer (the root of this scene), the script controls both itself and its child (the ColorRect overlay).
+
+    This is a core Godot pattern: nodes are the visual/structural building blocks, scripts are the behavior. A node without a script just sits there. A node with a script does things.
 
 ## Step 5: Register Autoloads
 
@@ -251,3 +280,5 @@ scenes/main/main.gd               # Autoload verification script
 ```
 
 The `.godot/` folder is Godot's local cache — it's already in `.gitignore` and should never be committed.
+
+--8<-- "docs/_includes/glossary.md"

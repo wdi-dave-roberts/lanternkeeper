@@ -21,6 +21,7 @@ theme:
     - toc.follow
     - content.action.edit
     - content.action.view
+    - content.tooltips
 
 nav:
   - Home: index.md
@@ -72,5 +73,12 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
       clickable_checkbox: true
+  - pymdownx.snippets:
+      base_path: ["."]
+  - abbr
   - toc:
       permalink: true
+
+plugins:
+  - search
+  - glightbox
