@@ -10,19 +10,16 @@ This project uses a phased workflow called GSD to keep our work organized. Befor
 
 A guide for getting set up and understanding what you're looking at.
 
-## Install Godot
+## Install Godot & Set Up the Project
+
+If the project is already created (there's a `project.godot` file in the repo), you just need to install Godot and import it:
 
 1. Go to [godotengine.org/download](https://godotengine.org/download)
 2. Download **Godot 4.6+** (the standard version, not the .NET/C# version)
-3. On Mac: drag to Applications. On Windows: unzip and run.
-4. There's no installer — Godot is a single application.
+3. On Mac: drag to Applications. On Windows: unzip and run. There's no installer — Godot is a single application.
+4. Launch Godot, click "Import", navigate to the `lanternkeeper` folder, select `project.godot`, and click "Import & Edit"
 
-## Open the Project
-
-1. Launch Godot
-2. Click "Import"
-3. Navigate to the `lanternkeeper` folder and select `project.godot`
-4. Click "Import & Edit"
+If you're setting up the project from scratch (no `project.godot` yet), follow the full [Project Setup](project-setup.md) guide — it covers every step with Mac and PC instructions.
 
 ## What You're Looking At
 
