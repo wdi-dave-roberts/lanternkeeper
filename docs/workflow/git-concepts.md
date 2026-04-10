@@ -12,16 +12,17 @@ Every change is saved as a **commit** — a snapshot of what changed, when, and 
 
 Picture three places your work exists:
 
-```
-Your Machine                          GitHub
-┌──────────────────────┐          ┌──────────────┐
-│  Your working files  │          │              │
-│  (what you see in    │  push →  │   Shared     │
-│   the editor)        │          │   History    │
-│                      │  ← pull  │              │
-│  Your local history  │          │  (both of us │
-│  (commits you made)  │          │   can see)   │
-└──────────────────────┘          └──────────────┘
+```mermaid
+graph LR
+    subgraph local["Your Machine"]
+        A["Your working files\n(what you see in the editor)"]
+        B["Your local history\n(commits you made)"]
+    end
+    subgraph remote["GitHub"]
+        C["Shared History\n(both of us can see)"]
+    end
+    local -- "push →" --> remote
+    remote -- "← pull" --> local
 ```
 
 - **Working files** — the actual files on your computer. What you edit.
