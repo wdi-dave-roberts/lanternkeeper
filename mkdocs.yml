@@ -42,15 +42,14 @@ nav:
       - Project Setup: learning/project-setup.md
     - How We Work:
       - Roles & Collaboration: workflow/overview.md
-      - Git Concepts: workflow/git-concepts.md
       - "GSD Workflow: The Basics": learning/gsd-guide.md
       - GSD Day-to-Day: workflow/gsd-basics.md
       - GSD Advanced: workflow/gsd-advanced.md
-      - Claude Code Cheat Sheet: workflow/claude-code-cheatsheet.md
-      - Examples: workflow/examples.md
-      - Asset Conventions: workflow/asset-conventions.md
     - Quick Lookup:
+      - Git Basics: workflow/git-concepts.md
       - Godot: reference/godot.md
+      - Claude Code Cheat Sheet: workflow/claude-code-cheatsheet.md
+      - Asset Conventions: workflow/asset-conventions.md
       - Glossary: workflow/glossary.md
     - Working Sessions:
       - "2026-04-11": sessions/2026-04-11.md
@@ -80,7 +79,7 @@ markdown_extensions:
       base_path: ["."]
   - abbr
   - toc:
-      permalink: true
+      permalink: "#"
 
 plugins:
   - search

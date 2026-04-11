@@ -19,3 +19,7 @@ This is the creative home base for Lanternkeeper. Everything here defines what t
 ---
 
 The split is intentional: **Game Parameters** defines the *rules* (how long is a session, what art style, what music feels right), while the **content guides** are the *tools* for writing the actual words and quests that live inside those rules. Parameters are the container. Content fills it.
+
+---
+
+When adding art, audio, or font files to the project, follow the [Asset Conventions](../workflow/asset-conventions.md) for naming, formatting, and directory structure.
