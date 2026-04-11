@@ -32,8 +32,8 @@ Decimal phases appear between their surrounding integers in numeric order.
 **Plans**: 4 plans
 
 Plans:
-- [ ] 00-01-PLAN.md — GDScript autoloads, touch input, safe area container
-- [ ] 00-02-PLAN.md — Learning resources for Allie (docs site)
+- [x] 00-01-PLAN.md — GDScript autoloads, touch input, safe area container
+- [x] 00-02-PLAN.md — Learning resources for Allie (docs site)
 - [ ] 00-03-PLAN.md — Godot project creation, settings, test scene (human-driven)
 - [ ] 00-04-PLAN.md — iOS pipeline verification (human-driven, Apple Developer enrollment)
 
