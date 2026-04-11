@@ -51,6 +51,8 @@ nav:
     - Glossary: workflow/glossary.md
   - Reference:
     - Godot: reference/godot.md
+  - Working Sessions:
+    - "2026-04-11": sessions/2026-04-11.md
   - Brainstorms:
     - "2026-04-10: Architecture & Design": brainstorms/2026-04-10-lanternkeeper-architecture-and-design-brainstorm.md
 
