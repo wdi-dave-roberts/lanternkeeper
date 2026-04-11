@@ -25,36 +25,37 @@ theme:
 
 nav:
   - Home: index.md
-  - Design:
+  - Game Design:
+    - Overview: design/index.md
     - Original Vision: design/original-vision.md
     - Game Parameters: design/game-parameters.md
+    - Dialogue Guide: content/dialogue-guide.md
+    - Quest Guide: content/quest-guide.md
   - Architecture:
     - Technical Decisions: architecture/technical-decisions.md
     - Project Structure: architecture/project-structure.md
-  - Content:
-    - Dialogue Guide: content/dialogue-guide.md
-    - Quest Guide: content/quest-guide.md
-  - Learning:
-    - Getting Started with Godot: learning/getting-started.md
-    - "How We Build: GSD": learning/gsd-guide.md
-    - GDScript Basics: learning/gdscript-basics.md
-    - Autoloads Explained: learning/autoloads-explained.md
-    - Project Setup: learning/project-setup.md
-  - Workflow:
-    - How We Work Together: workflow/overview.md
-    - Git Concepts: workflow/git-concepts.md
-    - Claude Code Cheat Sheet: workflow/claude-code-cheatsheet.md
-    - GSD Basics: workflow/gsd-basics.md
-    - GSD Advanced: workflow/gsd-advanced.md
-    - Examples: workflow/examples.md
-    - Asset Conventions: workflow/asset-conventions.md
-    - Glossary: workflow/glossary.md
   - Reference:
-    - Godot: reference/godot.md
-  - Working Sessions:
-    - "2026-04-11": sessions/2026-04-11.md
-  - Brainstorms:
-    - "2026-04-10: Architecture & Design": brainstorms/2026-04-10-lanternkeeper-architecture-and-design-brainstorm.md
+    - Learning Godot:
+      - Getting Started: learning/getting-started.md
+      - GDScript Basics: learning/gdscript-basics.md
+      - Autoloads Explained: learning/autoloads-explained.md
+      - Project Setup: learning/project-setup.md
+    - How We Work:
+      - Roles & Collaboration: workflow/overview.md
+      - Git Concepts: workflow/git-concepts.md
+      - "GSD Workflow: The Basics": learning/gsd-guide.md
+      - GSD Day-to-Day: workflow/gsd-basics.md
+      - GSD Advanced: workflow/gsd-advanced.md
+      - Claude Code Cheat Sheet: workflow/claude-code-cheatsheet.md
+      - Examples: workflow/examples.md
+      - Asset Conventions: workflow/asset-conventions.md
+    - Quick Lookup:
+      - Godot: reference/godot.md
+      - Glossary: workflow/glossary.md
+    - Working Sessions:
+      - "2026-04-11": sessions/2026-04-11.md
+    - Brainstorms:
+      - "2026-04-10: Architecture & Design": brainstorms/2026-04-10-lanternkeeper-architecture-and-design-brainstorm.md
 
 extra_css:
   - stylesheets/extra.css

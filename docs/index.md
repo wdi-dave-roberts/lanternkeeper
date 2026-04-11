@@ -9,9 +9,9 @@ hide:
   <h1>Emberfall Project Docs</h1>
   <p>Everything you need to build the game — design vision, technical architecture, content guides, and learning resources. Built by Dave and Allie.</p>
   <div class="hero-actions">
-    <a class="button-link primary" href="design/original-vision/">Original Vision</a>
+    <a class="button-link primary" href="design/">Game Design</a>
     <a class="button-link" href="architecture/technical-decisions/">Architecture</a>
-    <a class="button-link" href="content/dialogue-guide/">Writing Content</a>
+    <a class="button-link" href="learning/getting-started/">Getting Started</a>
   </div>
 </section>
 
@@ -30,7 +30,7 @@ hide:
   </div>
 </div>
 
-<p class="section-label">Design</p>
+<p class="section-label">Game Design</p>
 
 <div class="doc-grid" markdown>
   <div class="doc-card">
@@ -40,6 +40,10 @@ hide:
   <div class="doc-card">
     <strong><a href="design/game-parameters/">Game Parameters</a></strong>
     <p>Session design, progression, dialogue, quests, art direction, and sound.</p>
+  </div>
+  <div class="doc-card">
+    <strong><a href="content/dialogue-guide/">Dialogue Guide</a></strong>
+    <p>How to write and edit Aetherling's dialogue in the JSON content files.</p>
   </div>
 </div>
 
@@ -56,15 +60,15 @@ hide:
   </div>
 </div>
 
-<p class="section-label">For Allie</p>
+<p class="section-label">Getting Started</p>
 
 <div class="doc-grid" markdown>
   <div class="doc-card">
-    <strong><a href="content/dialogue-guide/">Dialogue Guide</a></strong>
-    <p>How to write and edit Aetherling's dialogue in the JSON content files.</p>
-  </div>
-  <div class="doc-card">
     <strong><a href="learning/getting-started/">Getting Started with Godot</a></strong>
     <p>First steps — installing Godot, opening the project, and understanding what you're looking at.</p>
+  </div>
+  <div class="doc-card">
+    <strong><a href="workflow/overview/">How We Work Together</a></strong>
+    <p>Roles, collaboration rules, and what each person owns.</p>
   </div>
 </div>
